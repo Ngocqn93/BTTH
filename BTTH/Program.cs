@@ -67,8 +67,6 @@ namespace HOMEWORK
             Console.WriteLine("MOI BAN CHON BAI TAP");
             return;
         }
-
-
         private static bool STOPPROGRAM()
         {
             Console.WriteLine();
@@ -90,7 +88,6 @@ namespace HOMEWORK
             int n = int.Parse(Console.ReadLine());
             return n;
         }
-
         private static void BAITAP1()
         {
             int n = NhapSoNguyen();
@@ -256,7 +253,7 @@ namespace HOMEWORK
         private static void BAITAP10()
         {
             int n = NhapSoNguyen();
-            Console.WriteLine("Dãy Fibonacci:");
+            Console.WriteLine("Day Fibonacci la:");
             for (int i = 0; i < n; i++)
             {
                 Console.Write(Fibonacci(i) + " ");
@@ -276,11 +273,7 @@ namespace HOMEWORK
         }
         private static void BAITAP8()
         {
-            int n = NhapSoNguyen();
-            Timsonguyento(n);
-        }
-        private static void Timsonguyento(int n)
-        {
+            int n = NhapSoNguyen();       
             bool[] isPrime = new bool[n + 1];
             // Khởi tạo mảng thành true
             for (int i = 0; i <= n; i++)
