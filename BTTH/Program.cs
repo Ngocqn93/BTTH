@@ -142,7 +142,7 @@ namespace HOMEWORK
             {
                 Console.WriteLine("so {0} nhap vao la so chinh phuong", n);
                 Console.OutputEncoding = System.Text.Encoding.UTF8;
-                Console.WriteLine("so {0} nhap vao la = {1}²", n,num);
+                Console.WriteLine("so {0} nhap vao la = {1}²",n,num);
             }
         }
         private static void BAITAP5()
