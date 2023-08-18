@@ -148,8 +148,19 @@ namespace HOMEWORK
         private static void BAITAP5()
         {
             int n = NhapSoNguyen();
-            Console.Write("NhapNam y= ");
-            int y = int.Parse(Console.ReadLine());
+            if (n == 2)
+            {
+                Console.Write("Vui long Nhap Nam y= ");
+                int y = int.Parse(Console.ReadLine());
+                if (((y % 4 == 0) && (y % 100 != 0)) || (y % 400 == 0))
+                {
+                    Console.WriteLine("so ngay trong thang {0} la 29 ngay", n);
+                }
+                else
+                {
+                    Console.WriteLine("so ngay trong thang {0} la 28 ngay", n);
+                }
+            }   
             switch (n)
             {
                 case 1:
@@ -160,17 +171,7 @@ namespace HOMEWORK
                 case 10:
                 case 12:
                     Console.WriteLine("so ngay trong thang {0} la 31 ngay", n);
-                    break;
-                case 2:
-                    if (((y % 4 == 0) && (y % 100 != 0)) || (y % 400 == 0))
-                    {
-                        Console.WriteLine("so ngay trong thang {0} la 29 ngay", n);
-                    }
-                    else
-                    {
-                        Console.WriteLine("so ngay trong thang {0} la 28 ngay", n);
-                    }
-                    break;
+                    break;     
                 case 4:
                 case 6:
                 case 9:
@@ -209,37 +210,46 @@ namespace HOMEWORK
         private static void BAITAP9()
         {
             int n = NhapSoNguyen();
-            Console.WriteLine("chon hinh dang:");
-            Console.WriteLine("1. kieu 1");
-            Console.WriteLine("2. kieu 2");
-            int choice = int.Parse(Console.ReadLine());
-            switch (choice)
+            if (n<=1)
             {
-                case 1:
-                    tamgiacbentrai(n);
-                    break;
-                case 2:
-                    tamgiacbenphai(n);
-                    break;
-                default:
-                    Console.WriteLine("Invalid choice.");
-                    break;
+                Console.WriteLine("Vui long nhap lai lai n >=2");
             }
+            else
+            {
+                Console.WriteLine("chon hinh dang:");
+                Console.WriteLine("1. tamgiacbentrai");
+                Console.WriteLine("2. tamgiacbenphai");
+                int kieu = int.Parse(Console.ReadLine());
+                switch (kieu)
+                {
+                    case 1:
+                        Tamgiacbentrai(n);
+                        break;
+                    case 2:
+                        Tamgiacbenphai(n);
+                        break;
+                    default:
+                        Console.WriteLine("kieu khong hop le");
+                        break;
+                }
+            }          
         }
-        private static void tamgiacbentrai(int n)
+        private static void Tamgiacbentrai(int n)
         {
-
+            Console.WriteLine("tam giac sao tuong ung");
             for (int i = n; i >= 1; i--)
             {
                 for (int j = 1; j <= i; j++)
+
                 {
-                    Console.Write("* ");
+                  Console.Write("* ");
                 }
                 Console.WriteLine();
             }
         }
-        private static void tamgiacbenphai(int n)
+        private static void Tamgiacbenphai(int n)
         {
+            Console.WriteLine("tam giac sao tuong ung");
             for (int i = 1; i <= n; i++)
             {
                 for (int j = 1; j <= i; j++)
